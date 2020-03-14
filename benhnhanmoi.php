@@ -1,3 +1,23 @@
+<?php
+    require_once("connet.php");
+    if(isset($_POST['submit']))
+    {
+        if(empty($_POST['HoTen']) or empty($_POST['sdt']) or empty($_POST['diachi']))
+        {
+             $error = "Chưa Nhập Tài Khoản và Mật Khẩu !!";
+        }else{
+            $HoTen = $_POST['HoTen'];
+            $sdt = $_POST['sdt'];
+            $diachi = $_POST['diachi'];
+            $namsinh = $_POST['namsinh'];
+            $gioitinh =$_POST['gioitinh'];
+            $sql ="INSERT INTO benh_Nhan(TenBN,SDT,DiaChi,NamSinh,GioiTinh) VALUES ('$HoTen','$sdt','$diachi','$namsinh','$gioitinh')";
+            $query = mysqli_query($conn,$sql);
+            header("location:index.php");
+            
+        }
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +36,7 @@
         <main>
             <div class="container">
             <div class="login-form">
-                <form action="" method="post">
+                <form action="" method="POST">
                     <h1>Thêm Bệnh Nhân mới</h1>
 
                     <div class="input-box">
@@ -34,25 +54,25 @@
                     </div>
                     <div style="padding-top: 15px;padding-bottom: 15px;">
                        Giớ Tính :
-                        <input type="radio" name="gioitinh" checked>Nam
-                        <input type="radio" name="gioitinh">Nữ<br/>
+                        <input type="radio" name="gioitinh" checked value="Nam">Nam
+                        <input type="radio" name="gioitinh" value="Nữ">Nữ<br/>
                     </div>
                 	  <div class="input-box">
                         <i ></i>
                         Năm Sinh:
                         <select name="namsinh">
-						<option value="volvo">1990</option>
-						<option value="saab">1991</option>
-						<option value="fiat">1992</option>
-						<option valsue="audi">1993</option>
-						<option value="volvo">1994</option>
-						<option value="saab">1995</option>
-						<option value="fiat">1996</option>
-						<option valsue="audi">1997</option>
-						<option value="volvo">1998</option>
-						<option value="saab">1999</option>
-						<option value="fiat">2000</option>
-						<option valsue="audi">2001</option>
+						<option value="1990">1990</option>
+						<option value="1991">1991</option>
+						<option value="1992">1992</option>
+						<option valsue="1993">1993</option>
+						<option value="1994">1994</option>
+						<option value="1995">1995</option>
+						<option value="1996">1996</option>
+						<option valsue="1997">1997</option>
+						<option value="1998">1998</option>
+						<option value="1999">1999</option>
+						<option value="2000">2000</option>
+						<option valsue="2001">2001</option>
 						</select>
                     </div>
           
