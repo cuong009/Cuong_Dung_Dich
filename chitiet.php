@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-    include('controller/c_tintuc.php');
-    $c_tintuc = new C_tintuc();
-    $noi_dung = $c_tintuc->index();
-    //print_r($noi_dung);
-    $menu = $noi_dung['menu'];
-   
-?>
 <head>
 
     <meta charset="utf-8">
@@ -90,7 +82,7 @@
 
 
                         <?php
-                    }else{
+                        }else{
                         ?>
                          <li><a>
                         Hello! Cuong000
@@ -118,41 +110,20 @@
           
 
             <div class="col-md-9">
-	            <div class="panel panel-default" style="width: 1100px;">
-	            	<div class="panel-heading" style="background-color:#337AB7; color:white;width: 1100px;" >
-	            		<h2 style="">Dịch Vụ <i class="fa fa-book-open"></i> </h2>
-	            	</div>
+                <div class="panel panel-default" style="width: 1100px;">
+                    <div class="panel-heading" style="background-color:#337AB7; color:white;width: 1100px;" >
+                        <h2 style="">Dịch Vụ <i class="fa fa-book-open"></i> </h2>
+                    </div>
 
-	            	<div class="panel-body" >
-	            		<!-- item -->
-                            <?php
-                                foreach($menu as $mn)
-                                {
-                                    ?>
-                                    <div class="row-item row">
+                    <div class="panel-body" >
+                        <!-- item -->
+                            
+                        
+                        <!-- end item -->
 
-                            <h3>
-                                <a href="#"><?=$mn->Ten?></a> 
-                       
-                            </h3>
-                            <div class="col-md-12 border-right">
-                                <div class="col-md-9">
-                                    <a class="btn btn-primary" href="chitiet.php">Xem Chi Tiết <span class="glyphicon glyphicon-chevron-right"></span></a>
-                                </div>
-
-                            </div>
-
-                            <div class="break"></div>
-                        </div>
-                                    <?php
-                                }
-                            ?>
-					    
-		                <!-- end item -->
-
-					</div>
-	            </div>
-        	</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.row -->
     </div>

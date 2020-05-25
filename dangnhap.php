@@ -1,5 +1,5 @@
 <?php
-    require_once("connet.php");
+    include('connet.php');
     if(isset($_POST['submit']))
     {
         if(empty($_POST['username']) or empty($_POST['password']))
@@ -28,7 +28,7 @@
         <title>Đăng nhập</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/DangNhap.css" rel="stylesheet" type="text/css"/>
+        <link href="public/css/DangNhap.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
     	<div id="wrap">
@@ -43,7 +43,7 @@
                 <form action="" method="post">
                     <h1>Đăng nhập vào website</h1>
                     <div class="input-box">
-                        <i ></i>
+                        <i></i>
                         <input type="text" placeholder="Nhập username" name="username">
                     </div>
                     <div class="input-box">
@@ -51,7 +51,7 @@
                         <input type="password" placeholder="Nhập mật khẩu" name="password">
                     </div>
                     <div class="btn-box">
-                        <input type="submit" name="submit" value="Đăng Nhập" style="width: 80px;height: 40px; border-radius: 10px;background-color: rgb(128,128,128,0.2);cursor: pointer;" >
+                        <input type="submit" name="submit" value="Đăng Nhập" style="width: 80px;height: 40px; border-radius: 10px;background-color: rgb(128,128,128,0.2);cursor: pointer;" > 
                     </div>
                 </form>
             </div>
