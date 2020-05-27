@@ -3,7 +3,6 @@
 <?php
     include('controller/c_tintuc.php');
     $c_tintuc = new C_tintuc();
-    $noi_dung = $c_tintuc->index();
     //print_r($noi_dung);
     $menu = $noi_dung['menu'];
    
