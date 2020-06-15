@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+chủ yếu Cường commit!
 <?php
     include('controller/c_tintuc.php');
     $c_tintuc = new C_tintuc();
